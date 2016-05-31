@@ -9,7 +9,7 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-      <div>login</div>
+      <div>Login</div>
       <Link to='/page'></Link>
       </div>
     );
