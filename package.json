@@ -3,15 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/main.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify -v -d -t [ reactify --es6 ] src/main.js -o build/app.js"
+    "watch": "watchify -v -d -t [ reactify --es6 ] src/main.js -o build/app.js",
+    "build": "NODE_ENV=production browserify -t [ reactify --es6 ] src/main.js | uglifyjs > build/app.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1"
   },
   "devDependencies": {
     "browserify": "^13.0.1",
